@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050D05">
+
+    <!-- Animated background image with dark overlay -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bgg_image"
+        android:scaleType="centerCrop"
+        android:alpha="0.45"/>
+
+    <!-- Radial green glow top -->
+    <View
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-80dp"
+        android:background="@drawable/glow_green_radial"/>
+
+    <!-- Radial green glow bottom -->
+    <View
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-60dp"
+        android:background="@drawable/glow_green_radial"
+        android:alpha="0.5"/>
+
+    <!-- MAIN CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp">
+
+        <!-- TOP SPACER -->
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1.2"/>
+
+        <!-- LOGO SECTION -->
+        <LinearLayout
+            android:id="@+id/logoSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Glowing icon ring -->
+            <FrameLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center">
+
+                <View
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/glow_green_radial"
+                    android:alpha="0.8"/>
+
+                <View
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_green_filled"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="🌿"
+                    android:textSize="36sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="AgroAid"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:letterSpacing="0.05"/>
+
+            <TextView
+                android:id="@+id/tvTagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Smart Farming · Better Yields"
+                android:textColor="#66BB6A"
+                android:textSize="13sp"
+                android:letterSpacing="0.12"/>
+
+        </LinearLayout>
+
+        <!-- MIDDLE SPACER -->
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <!-- GLASS CARD -->
+        <LinearLayout
+            android:id="@+id/glassCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/glass_card_bg"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp"
+                android:text="Sign in to your farm dashboard"
+                android:textColor="#A5D6A7"
+                android:textSize="13sp"/>
+
+            <!-- Email field (hidden by default, shown on "Already a member" tap) -->
+            <LinearLayout
+                android:id="@+id/emailLoginSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Email input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/input_field_dark"
+                    android:layout_marginBottom="12dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✉️"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:hint="Email address"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:inputType="textEmailAddress"
+                        android:background="@null"
+                        android:imeOptions="actionNext"/>
+                </LinearLayout>
+
+                <!-- Password input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/input_field_dark"
+                    android:layout_marginBottom="16dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔒"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:hint="Password"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:inputType="textPassword"
+                        android:background="@null"
+                        android:imeOptions="actionDone"/>
+                </LinearLayout>
+
+                <!-- Sign In button -->
+                <Button
+                    android:id="@+id/btnEmailSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="SIGN IN"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:background="@drawable/btn_green_rounded"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Divider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#2A4A2A"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="  or  " android:textColor="#4A7A4A" android:textSize="12sp"/>
+                    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#2A4A2A"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- JOIN / CREATE ACCOUNT button -->
+            <Button
+                android:id="@+id/createAccountBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🌱  JOIN THE FARMTECH COMMUNITY"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:background="@drawable/btn_green_rounded"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- GOOGLE button -->
+            <Button
+                android:id="@+id/googleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="  SIGN IN WITH GOOGLE"
+                android:textColor="#E0E0E0"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04"
+                android:background="@drawable/btn_dark_outline"
+                android:drawableStart="@drawable/ic_google"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Already a member -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already a member? "
+                    android:textColor="#7A9A7A"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tvAlreadyMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGIN"
+                    android:textColor="#66BB6A"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="1dp"
+                    android:background="@drawable/underline_green"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- BOTTOM SPACER -->
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="0.8"/>
+
+        <!-- Bottom tagline -->
+        <TextView
+            android:id="@+id/tvBottomTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="🌍 Empowering 10M+ Indian Farmers"
+            android:textColor="#336633"
+            android:textSize="12sp"
+            android:letterSpacing="0.05"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <bitmap
+            android:src="@drawable/bg_image"
+            android:scaleType="centerCrop"/>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#88000000"/>
+        </shape>
+    </item>
+
+</layer-list>

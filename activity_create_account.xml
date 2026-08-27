@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#081108">
+
+    <!-- BACKGROUND IMAGE -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg3_image"
+        android:scaleType="centerCrop"
+        android:alpha="0.55"/>
+
+    <!-- DARK OVERLAY -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"/>
+
+    <!-- TOP GREEN GLOW -->
+    <View
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-100dp"
+        android:background="@drawable/glow_green_radial"
+        android:alpha="0.7"/>
+
+    <!-- MAIN CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <!-- TOP SPACE -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- LOGO SECTION -->
+        <LinearLayout
+            android:id="@+id/logoSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- GLOW CIRCLE -->
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/glow_green_radial"/>
+
+                <View
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_green_filled"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="🌱"
+                    android:textSize="40sp"/>
+            </FrameLayout>
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textColor="#FFFFFF"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"/>
+
+            <!-- SUBTITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join the future of smart farming"
+                android:textColor="#B7E4B8"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- SPACE -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"/>
+
+        <!-- GLASS CARD -->
+        <LinearLayout
+            android:id="@+id/createCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/glass_card_bg"
+            android:padding="24dp">
+
+            <!-- EMAIL -->
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Email Address"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#BBBBBB"
+                android:background="@drawable/edit_line"
+                android:padding="14dp"/>
+
+            <!-- PASSWORD -->
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Password"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#BBBBBB"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_line"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"/>
+
+            <!-- CONFIRM PASSWORD -->
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Confirm Password"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#BBBBBB"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_line"
+                android:layout_marginTop="16dp"
+                android:padding="14dp"/>
+
+            <!-- CREATE BUTTON -->
+            <Button
+                android:id="@+id/createBtn"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:text="CREATE ACCOUNT"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#102010"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/btn_green_rounded"/>
+
+        </LinearLayout>
+
+        <!-- SPACE -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"/>
+
+        <!-- LOGIN TEXT -->
+        <TextView
+            android:id="@+id/tvBottomLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? LOGIN"
+            android:textColor="#D6FFD6"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="26dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "789152604927",
+    "project_id": "agroaid-35278",
+    "storage_bucket": "agroaid-35278.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789152604927:android:e89d81cf05600cb07262ca",
+        "android_client_info": {
+          "package_name": "com.example.agroaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789152604927-humjh9j40kfn4drpa9vda90q547tuj2r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agroaid",
+            "certificate_hash": "4fb1bfb0802f4a59d78fa78f53a1ded513eac5ce"
+          }
+        },
+        {
+          "client_id": "789152604927-i8pgbj35ccq94u1f6guklt5nll2iptma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agroaid",
+            "certificate_hash": "076923980e0afe3e815a86afa703fe597ab0a856"
+          }
+        },
+        {
+          "client_id": "789152604927-arpo2clgcdb4372l78v0p2130n0e78m0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2jwxyZExDConhuiQP7PN-2K5GggssUZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789152604927-arpo2clgcdb4372l78v0p2130n0e78m0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

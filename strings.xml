@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">AgroAid</string>
+
+    <string name="default_web_client_id">
+        789152604927-arpo2clgcdb4372l78v0p2130n0e78m0.apps.googleusercontent.com
+    </string>
+
+</resources>
